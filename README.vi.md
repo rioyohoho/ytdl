@@ -2,7 +2,7 @@
 
 # YouTube Downloader & Metadata Extractor
 
-Một tiện ích mở rộng Chrome Side Panel gọn nhẹ (Manifest V3) giúp phân tích định dạng, trích xuất siêu dữ liệu (metadata) và tạo lệnh tải xuống `yt-dlp` cũng như file script thực thi hàng loạt (`.bat`) cho video, âm thanh và danh sách phát (playlist) trên YouTube.
+Một tiện ích mở rộng cho trình duyệt để tải xuống video/audio nhanh chóng qua `yt-dlp` & `command`.
 
 ---
 
