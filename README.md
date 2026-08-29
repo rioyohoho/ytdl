@@ -2,7 +2,7 @@
 
 # YouTube Downloader & Metadata Extractor
 
-A lightweight Chrome Side Panel Extension (Manifest V3) that parses formats, extracts metadata, and generates `yt-dlp` download commands and batch scripts (`.bat`) for YouTube videos, audio, and playlists.
+A browser extension for quickly downloading videos/audio via `yt-dlp` and `command`.
 
 ---
 
