@@ -1,0 +1,7 @@
+test/
+
+
+qjs.*
+yt-dlp.*
+*.dll
+deno.exe
