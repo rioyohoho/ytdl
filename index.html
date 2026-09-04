@@ -11,14 +11,12 @@
   <div id="bg-image-layer"></div>
 
   <div class="app-container">
-    <!-- NAV TABS -->
     <div class="nav-tabs">
       <button class="tab-btn active" id="btn-tab-download" data-i18n="TAB_DOWNLOAD">Download</button>
       <button class="tab-btn" id="btn-tab-config" data-i18n="TAB_CONFIG">Config</button>
       <button class="tab-btn" id="btn-tab-info" data-i18n="TAB_INFO">Info</button>
     </div>
 
-    <!-- PANEL 1: DOWNLOAD -->
     <div id="panel-download" class="panel-content active">
       <div class="card-section">
         <div class="card-title" data-i18n="CARD_MEDIA_SEARCH">Media Search</div>
@@ -40,8 +38,9 @@
         </div>
 
         <div class="d-flex gap-2 align-center">
-          <input type="text" id="input-search" data-i18n-placeholder="SEARCH_PLACEHOLDER_VIDEO"
+          <input type="text" id="input-search" data-i18n-placeholder="SEARCH_PLACEHOLDER_VIDEO" style="flex:1;"
             placeholder="Video Link or ID...">
+          <button class="btn" id="btn-find-video" style="width:90px;" data-i18n="BTN_FIND_VIDEO">Find Video</button>
           <button class="btn btn-primary" id="btn-search" style="width:80px;" data-i18n="BTN_SEARCH">Search</button>
         </div>
       </div>
@@ -84,10 +83,12 @@
         <div id="ytdlp-status" style="font-size:0.8em; margin-bottom:8px; display:none;"></div>
 
         <div class="mb-2">
-          <label class="switch-container">
-            <input type="checkbox" id="toggle-audio-video">
-            <span data-i18n="DOWNLOAD_TYPE_AUDIO">Download Audio (Default: Video)</span>
-          </label>
+          <label style="display:block; margin-bottom:4px;" data-i18n="LBL_DOWNLOAD_TYPE">Download Type:</label>
+          <div class="mode-toggle" id="download-type-group" style="display:flex; width:100%;">
+            <button class="mode-btn active" id="dl-type-video" data-type="video" style="flex:1;" data-i18n="DL_TYPE_VIDEO">Video</button>
+            <button class="mode-btn" id="dl-type-audio" data-type="audio" style="flex:1;" data-i18n="DL_TYPE_AUDIO">Audio</button>
+            <button class="mode-btn" id="dl-type-media" data-type="media" style="flex:1;" data-i18n="DL_TYPE_MEDIA">Media</button>
+          </div>
         </div>
         <div class="mb-2">
           <label style="display:block; margin-bottom:4px;" data-i18n="LBL_QUALITY">Quality (yt-dlp format):</label>
@@ -138,7 +139,6 @@
       </div>
     </div>
 
-    <!-- PANEL 2: CONFIG -->
     <div id="panel-config" class="panel-content">
       <div class="card-section">
         <div class="card-title" data-i18n="CARD_LANGUAGE">Language</div>
@@ -219,7 +219,6 @@
       </div>
     </div>
 
-    <!-- PANEL 3: INFO -->
     <div id="panel-info" class="panel-content">
       <div class="card-section info-hero">
         <div class="info-logo">▶</div>
@@ -233,8 +232,8 @@
         <div class="mb-2">
           <div style="font-weight:bold; color:var(--accent-color); font-size:0.9em; margin-bottom:3px;" data-i18n="GUIDE_SEC_VIDEO_TITLE">1. Download Video / Audio</div>
           <ul style="margin:0; padding-left:18px; font-size:0.82em; opacity:0.9; line-height:1.5;">
-            <li data-i18n="GUIDE_SEC_VIDEO_1">Paste Link/ID or press <kbd>Shift+T</kbd> to pick a video directly from page.</li>
-            <li data-i18n="GUIDE_SEC_VIDEO_2">Select desired quality or check 'Download Audio' (MP3).</li>
+            <li data-i18n="GUIDE_SEC_VIDEO_1">Paste Link/ID or click 'Find Video' / press <kbd>Shift+T</kbd> to pick a video directly from page.</li>
+            <li data-i18n="GUIDE_SEC_VIDEO_2">Select desired quality or choose Download Type (Video, Audio, Media).</li>
             <li data-i18n="GUIDE_SEC_VIDEO_3">Click 'Run yt-dlp (.bat)' to auto-download or 'Copy CMD' for manual run.</li>
           </ul>
         </div>
